@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' sans-serif;
+}
+
+.wrapper {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(eduford_img/banner.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+   justify-content: space-between; 
+    align-items: center;
+    padding: 2% 6%;
+}
+
+nav img {
+    width: 120px;
+}
+
+ul {
+    flex: 1;
+    text-align: right;
+} 
+
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+
+ ul li  { 
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    padding: 8px 15px;
+}
+
+ ul li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #f44336;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    transition: width 0.5s;
+}
+
+ ul li:hover::after{
+    width: 100%;
+}
+
+.text-box {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.text-box a {
+    display: inline-block;
+    border: 1px solid #fff;
+    background: transparent;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 40px;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.text-box a::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: -10px;
+    top: 20px;
+}
+
+.text-box a::after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: -10px;
+    top: 20px;
+}
+
+.text-box a:hover {
+    background: #f44336;
+    border: 1px solid #f44336;
+}
+
+.text-box a:hover::after {
+    display: none;
+}
+
+.text-box a:hover::before {
+    display:none;
+}
+
+.course {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;  
+}
+
+.course h2 {
+    margin-top: 50px;
+    font-size: 2.2rem;
+}
+
+.course p.text {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    font-size: 1.2rem;
+    letter-spacing: 2;
+}
+
+.course-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    column-gap: 30px;
+}
+
+.course-col {
+    background: #fff3f3;
+    padding: 30px 10px 5px;
+    letter-spacing: 1.8;
+}
+
+.course-col h3 {
+    padding-top: 15px;
+    font-weight: 700;
+    padding-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+.course-col p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.3;
+    padding-bottom: 10px;
+}
+
+.course-col:hover {
+    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.3);
+}
+
+nav .fa {
+    font-size: 40px;
+    color: #fff;
+    display: none;
+} 
+
+
+nav .fa:hover {
+    color: #f443369b;
+} 
+
+.wrapper input {
+    display: none;
+}
+
+.global-campus {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.global-campus h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 60px;
+}
+.global-campus p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.global-campus .images .image-col {
+    flex-basis: 33.3%;
+    margin-right: 30px;
+    position: relative;
+}
+
+.global-campus .images .image-col img {
+    width: 100%;
+    /* display: block; */
+}
+.global-campus .images {
+    display: flex;
+}
+
+.global-campus .layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background 1s;
+} 
+
+.global-campus .layer:hover {
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+   transition: 0.3s;
+}
+
+.layer:hover h3 {
+   bottom: 50%;
+   opacity: 1;
+}
+
+.facil-col {
+    text-align: center;
+}
+
+.facil-col h3 {
+    margin-top: 40px;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.facil-col p {
+ margin-bottom: 50px;
+ font-size: 18px;
+}
+
+.facilities {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+
+.facilities .faci-col {
+    flex-basis: 33.33%;
+    margin-right: 25px;
+}
+
+.facilities .faci-col img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.faci-col h4, 
+.faci-col p {
+    text-align: left;
+}
+.faci-col h4 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.faci-col p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.testimonies {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.testimonies h3.test {
+    font-size: 25px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.eri img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.testimonies p.mid {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.testimonies .eri {
+    display: flex;
+    background: #fff3f3;
+    margin-right: 30px;
+    padding: 20px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.testimonials{
+    display: flex;
+}
+
+.eri .texts {
+    flex: 1;
+    text-align: left;
+}
+
+.eri .texts h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.eri i {
+    color: #f44336;
+}
+
+.enrollment {
+    width: 80%;
+    /* height: 400px; */
+    margin: 100px auto;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+    url(eduford_img/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 120px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    border-radius: 20px;
+}
+
+.enrollment a {
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.enrollment a:hover {
+    background: #f44336;
+    border: 1px solid #f44336;
+}
+
+.enrollment a::before {
+    content: '';
+    background: #fff;
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+}
+
+.enrollment a::after {
+    content: '';
+    background: #fff;
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: -20px;
+}
+
+.enrollment a:hover::before,
+.enrollment a:hover::after{
+    display: none;
+}
+
+
+footer {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 25px;    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+footer .fa {
+    color: #f44336;
+    margin-right: 10px;
+    margin-bottom: 80px;
+}
+
+@media(max-width: 800px) {
+
+    .text-box h1 {
+         font-size: 1.5rem;
+    }
+
+    .text-box p {
+        font-size: 0.8rem;
+        line-height: 2;
+    }
+
+  nav .fa {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+ #check:checked ~ nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 2;
+    background: #f44336;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+ }
+
+ .fa.fa-times {
+    text-align: left;
+    font-size: 25px;
+ }
+
+ .fa.fa-times:hover {
+    color: #fff;
+ }
+
+ #check:checked ~ nav .fa.fa-bars {
+    display: none;
+ }
+
+ nav ul li {
+    display: block;
+    margin-bottom: 40px;
+    transition: transform 1s;
+  }
+
+ nav ul li a:hover {
+    color: #000;
+ }
+
+  nav ul li:hover {
+    transform: scale(1.4);
+  }
+
+  nav ul li::after {
+    display: none;
+  }
+
+  .course .course-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .course .course-row .course-col {
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+.global-campus .images{
+    display: flex;
+    flex-direction: column;
+}
+
+.global-campus .images .image-col {
+    height: 400px;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.global-campus .images .image-col img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.facilities {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials .eri {
+    margin-bottom: 30px;
+}
+}
+
+/* About page design */
+
+.about {
+    background: url(eduford_img/background.jpg);
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.abouttt {
+    text-align: center;
+}
+
+.abouttt h1 {
+    margin-top: 40px;
+    color: #fff;
+}
+
+.foot {
+    margin-top: 80px;
+}
+
+.foot .made {
+    margin-top: 10px;
+}
+
+
+/* courses page design */
+
+.courzzz {
+    background: url(eduford_img/background.jpg);
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.legs-lol {
+    margin-top: 60px;
+}
+
+
+
+/* the blog */
+
+.blog {
+    background: url(eduford_img/background.jpg);
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+.container {
+    margin: 70px auto 30px;
+    width: 80%;
+    display: flex;
+}
+
+.number-one {
+    flex-basis: 60%;
+    margin-right: 30px;
+}
+.number-one img {
+    width: 100%;
+} 
+
+
+
+.hero h3 {
+    background-color: #f44336;
+    padding: 7px 90px;
+    color: #fff;
+}
+
+.hero div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero span {
+    margin-top: 20px;
+    letter-spacing: 1.5px;
+}
+
+.number-one h2 {
+    margin: 20px 0;
+}
+
+.number-one p {
+    font-size: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    opacity: 0.3;
+}
+
+.number-one form {
+    margin-top: 50px;
+    border: 1px solid #777;
+    padding: 20px;
+}
+
+.number-one form input,
+.number-one form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    background: rgb(217, 214, 214);
+}
+
+.number-one form input::placeholder, 
+.number-one form textarea::placeholder{
+       padding-left: 20px;
+}
+
+.number-one form input.short {
+    height: 30px;
+}
+
+
+
+.number-one form h2 {
+    margin-top: -10px;
+}
+
+
